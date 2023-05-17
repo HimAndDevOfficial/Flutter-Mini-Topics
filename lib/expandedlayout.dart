@@ -35,7 +35,7 @@ class ExampleExpandedLayout extends StatelessWidget {
         onPressed: (){
 
         },
-        child: Text("Button 1")
+        child: Text("Alert Dialog")
        )
       ),
      ),
