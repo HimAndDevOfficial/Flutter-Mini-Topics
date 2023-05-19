@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterminitopics/stackexample.dart';
+import 'package:flutterminitopics/tabbarexample.dart';
+
+import 'expandedform.dart';
 
 class ExampleExpandedLayout extends StatelessWidget {
 
@@ -14,6 +18,8 @@ class ExampleExpandedLayout extends StatelessWidget {
         Expanded(
          child:ElevatedButton(
           onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                StackExample()));
 
           }, child: Text("Stack"),
          )
@@ -21,6 +27,8 @@ class ExampleExpandedLayout extends StatelessWidget {
         Expanded(
             child:ElevatedButton(
              onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>
+               ExampleForm()));
 
              }, child: Text("Forms"),
             )
@@ -33,7 +41,8 @@ class ExampleExpandedLayout extends StatelessWidget {
       child: Center(
        child:ElevatedButton(
         onPressed: (){
-
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>
+              AlertDialog()));
         },
         child: Text("Alert Dialog")
        )
@@ -45,9 +54,10 @@ class ExampleExpandedLayout extends StatelessWidget {
        alignment: Alignment.bottomRight,
        child: ElevatedButton(
         onPressed: (){
-
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>
+          TabBarExample()));
         },
-        child:Text("Button 2")
+        child:Text("Tab Bar Example")
        ),
       ),
      )
