@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterminitopics/animationexample.dart';
+import 'package:flutterminitopics/progressbarexample.dart';
+import 'package:flutterminitopics/radiobuttonexample.dart';
 import 'package:flutterminitopics/stackexample.dart';
 import 'package:flutterminitopics/tabbarexample.dart';
 
@@ -60,7 +63,45 @@ class ExampleExpandedLayout extends StatelessWidget {
         child:Text("Tab Bar Example")
        ),
       ),
-     )
+     ),
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    AnimationExample()));
+              },
+              child:Text("Animation Example")
+          ),
+        ),
+      ),
+
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                MyProgressBarExample()));
+              },
+              child:Text("Progress Bar Example")
+          ),
+        ),
+      ),
+
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomLeft,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                MyRadioButtonExample()));
+              },
+              child:Text("Radio Button Example")
+          ),
+        ),
+      )
 
     ],
    )
