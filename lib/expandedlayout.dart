@@ -3,8 +3,10 @@ import 'package:flutterminitopics/animationexample.dart';
 import 'package:flutterminitopics/progressbarexample.dart';
 import 'package:flutterminitopics/radiobuttonexample.dart';
 import 'package:flutterminitopics/stackexample.dart';
+import 'package:flutterminitopics/switchexample.dart';
 import 'package:flutterminitopics/tabbarexample.dart';
 
+import 'barchartexample.dart';
 import 'expandedform.dart';
 
 class ExampleExpandedLayout extends StatelessWidget {
@@ -92,6 +94,19 @@ class ExampleExpandedLayout extends StatelessWidget {
 
       Expanded(
         child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                Switchexample()));
+              },
+              child:Text("Switch Example")
+          ),
+        ),
+      ),
+
+      Expanded(
+        child: Align(
           alignment: Alignment.bottomLeft,
           child: ElevatedButton(
               onPressed: (){
@@ -101,7 +116,20 @@ class ExampleExpandedLayout extends StatelessWidget {
               child:Text("Radio Button Example")
           ),
         ),
-      )
+      ),
+
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+              //   Navigator.push(context, MaterialPageRoute(builder: (context)=>
+              //       BarChartExample()));
+               },
+              child:Text("Chart Example")
+          ),
+        ),
+      ),
 
     ],
    )
