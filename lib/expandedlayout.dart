@@ -123,8 +123,8 @@ class ExampleExpandedLayout extends StatelessWidget {
           alignment: Alignment.bottomRight,
           child: ElevatedButton(
               onPressed: (){
-              //   Navigator.push(context, MaterialPageRoute(builder: (context)=>
-              //       BarChartExample()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    BarChartExample()));
                },
               child:Text("Chart Example")
           ),
