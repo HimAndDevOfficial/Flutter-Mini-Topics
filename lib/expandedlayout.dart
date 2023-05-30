@@ -7,6 +7,7 @@ import 'package:flutterminitopics/switchexample.dart';
 import 'package:flutterminitopics/tabbarexample.dart';
 
 import 'barchartexample.dart';
+import 'calenderexample.dart';
 import 'expandedform.dart';
 
 class ExampleExpandedLayout extends StatelessWidget {
@@ -100,7 +101,7 @@ class ExampleExpandedLayout extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>
                 Switchexample()));
               },
-              child:Text("Switch Example")
+              child:Text("Switch/CheckBox/GridView Example")
           ),
         ),
       ),
@@ -127,6 +128,18 @@ class ExampleExpandedLayout extends StatelessWidget {
                     BarChartExample()));
                },
               child:Text("Chart Example")
+          ),
+        ),
+      ),
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomLeft,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    CalenderExample()));
+              },
+              child:Text("Calender Example")
           ),
         ),
       ),
