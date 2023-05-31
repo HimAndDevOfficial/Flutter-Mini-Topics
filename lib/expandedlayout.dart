@@ -9,6 +9,7 @@ import 'package:flutterminitopics/tabbarexample.dart';
 import 'barchartexample.dart';
 import 'calenderexample.dart';
 import 'expandedform.dart';
+import 'networkingscreen.dart';
 
 class ExampleExpandedLayout extends StatelessWidget {
 
@@ -128,6 +129,18 @@ class ExampleExpandedLayout extends StatelessWidget {
                     BarChartExample()));
                },
               child:Text("Chart Example")
+          ),
+        ),
+      ),
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                NetworkingScreen()));
+              },
+              child:Text("Networking Example")
           ),
         ),
       ),
