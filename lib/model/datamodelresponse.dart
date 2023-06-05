@@ -1,36 +1,32 @@
 // To parse this JSON data, do
 //
-//     final dataModel = dataModelFromJson(jsonString);
+//     final dataModelResponse = dataModelResponseFromJson(jsonString);
 
 import 'dart:convert';
 
-DataModel dataModelFromJson(String str) => DataModel.fromJson(json.decode(str));
+DataModelResponse dataModelResponseFromJson(String str) => DataModelResponse.fromJson(json.decode(str));
 
-String dataModelToJson(DataModel data) => json.encode(data.toJson());
+String dataModelResponseToJson(DataModelResponse data) => json.encode(data.toJson());
 
-class DataModel {
+class DataModelResponse {
   String username;
-  String email;
   String password;
   String id;
 
-  DataModel({
+  DataModelResponse({
     required this.username,
-    required this.email,
     required this.password,
     required this.id,
   });
 
-  factory DataModel.fromJson(Map<String, dynamic> json) => DataModel(
+  factory DataModelResponse.fromJson(Map<String, dynamic> json) => DataModelResponse(
     username: json["username"],
-    email: json["email"],
     password: json["password"],
     id: json["_id"],
   );
 
   Map<String, dynamic> toJson() => {
     "username": username,
-    "email": email,
     "password": password,
     "_id": id,
   };

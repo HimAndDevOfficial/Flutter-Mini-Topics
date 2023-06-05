@@ -9,6 +9,7 @@ import 'package:flutterminitopics/tabbarexample.dart';
 import 'barchartexample.dart';
 import 'calenderexample.dart';
 import 'expandedform.dart';
+import 'loginscreen.dart';
 import 'networkingscreen.dart';
 
 class ExampleExpandedLayout extends StatelessWidget {
@@ -138,7 +139,7 @@ class ExampleExpandedLayout extends StatelessWidget {
           child: ElevatedButton(
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                NetworkingScreen()));
+                LoginScreen()));
               },
               child:Text("Networking Example")
           ),

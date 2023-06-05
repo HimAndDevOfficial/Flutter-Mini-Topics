@@ -29,9 +29,8 @@ class NetworkingScreen extends StatelessWidget {
                   itemBuilder: (context,index){
                    final user = users[index];
                    return ListTile(
-                     title: Text(user.name),
-                     subtitle: Text(user.age.toString()),
-                     leading: Text(user.colour),
+                     title: Text(user.username),
+                     subtitle: Text(user.email.toString()),
                    );
                   });
             }
