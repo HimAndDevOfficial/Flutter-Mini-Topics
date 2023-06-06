@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutterminitopics/animationexample.dart';
 import 'package:flutterminitopics/progressbarexample.dart';
 import 'package:flutterminitopics/radiobuttonexample.dart';
+import 'package:flutterminitopics/silverscreen.dart';
 import 'package:flutterminitopics/stackexample.dart';
 import 'package:flutterminitopics/switchexample.dart';
 import 'package:flutterminitopics/tabbarexample.dart';
+import 'package:flutterminitopics/tableexample.dart';
 
 import 'barchartexample.dart';
 import 'calenderexample.dart';
@@ -142,6 +144,30 @@ class ExampleExpandedLayout extends StatelessWidget {
                 LoginScreen()));
               },
               child:Text("Networking Example")
+          ),
+        ),
+      ),
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    TableExample()));
+              },
+              child:Text("Table Example")
+          ),
+        ),
+      ),
+      Expanded(
+        child: Align(
+          alignment: Alignment.bottomLeft,
+          child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                    SilverScreen()));
+              },
+              child:Text("Sliver Example")
           ),
         ),
       ),

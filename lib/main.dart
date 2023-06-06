@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterminitopics/alertdialog.dart';
+import 'package:flutterminitopics/splashscreen.dart';
 import 'package:flutterminitopics/stackexample.dart';
 
 import 'expandedform.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ExampleExpandedLayout(),
+      home:SplashScreen(),
     );
   }
 }
